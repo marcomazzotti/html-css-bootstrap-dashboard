@@ -12,13 +12,33 @@
 <body>
   
   <div class="wrapper">
-    <div class="header"></div>
+    <header>
+      <div class="header d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <img class="mobile-logo" src="img/mobile-logo.png" alt="">
+          </div>
+          <div class="input-group px-2">
+            <div class="input-group-text">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Prova a cercare: Lezioni di Laravel">
+          </div>
+          <div class="notifications px-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+            </svg>
+          </div>
+      </div>
+    </header>
+
+
     <div class="main-content d-flex">
       <div class="sidebar"></div>
       <div class="content">
         <div class="inner-header"></div>
       </div>
     </div>
+    
   </div>
 </body>
 </html>

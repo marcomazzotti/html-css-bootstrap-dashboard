@@ -4,12 +4,6 @@
   border: 2px solid red;
 }
 
-.header{
-  width: 100%;
-  min-height: 70px;
-  border: 1px solid orange;
-}
-
 .main-content{
   width: 100%;
   height: calc(100% - 70px);
@@ -33,3 +27,25 @@
   height: 70px;
   background-color: aqua;
 }
+
+/* common */
+img{
+  width: 80%;
+}
+
+/* header */
+.header{
+  width: 100%;
+  border: 1px solid orange;
+}
+
+.logo{
+  width: 80px;
+  text-align: center;
+}
+
+.notifications svg{
+  fill: orange;
+}
+
+
