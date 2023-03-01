@@ -10,13 +10,12 @@
   background-color: blue;
 }
 
-.ms_inner-header{
-  width: 100%;
-  height: 70px;
-  background-color: aqua;
+/* common */
+:root{
+  --inner-header-color: #1B72E8;
+  --primary-color: white;
 }
 
-/* common */
 img{
   width: 100%;
 }
@@ -53,6 +52,23 @@ img{
   .ms_sidebar{
     width:170px;
   }
+}
+
+/* inner-header */
+.ms_inner-header{
+  width: 100%;
+  min-height: 70px;
+  background-color: red;
+}
+
+.ms_btn-white{
+  background-color: none;
+  color: white;
+  border: 1px solid white;
+}
+
+.ms_btn-white:hover{
+  background-color: none;
 }
 
 
