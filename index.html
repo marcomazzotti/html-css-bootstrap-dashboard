@@ -11,10 +11,11 @@
 </head>
 <body>
   
-  <div class="wrapper">
-    <header>
-      <div class="header d-flex align-items-center justify-content-between">
-          <div class="logo ms-2">
+  <div class="ms_wrapper">
+
+    <!-- header -->
+      <div class="ms_header d-flex align-items-center justify-content-between">
+          <div class="ms_logo ms-2">
             <img class="d-lg-none" src="img/mobile-logo.png" alt="">
             <img class="d-none d-lg-block" src="img/logo.svg" alt="">
           </div>
@@ -26,7 +27,7 @@
             </div>
             <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Prova a cercare: lezioni di Laravel">
           </div>
-          <div class="notifications pe-4 d-flex">
+          <div class="ms_notifications pe-4 d-flex">
             <i class="fa-solid fa-list-ul me-4 d-none d-lg-inline"></i>
             <i class="fa-solid fa-circle-question d-none d-lg-inline"></i>
             <i class="fa-solid fa-ellipsis-vertical mx-4 d-none d-lg-inline"></i>
@@ -36,14 +37,28 @@
           </div>
       </div>
     </header>
+    <!-- /header -->
 
+    <!-- main-content -->
+    <div class="ms_main-content d-flex">
 
-    <div class="main-content d-flex">
-      <div class="sidebar"></div>
-      <div class="content">
-        <div class="inner-header"></div>
+      <!-- sidebar -->
+      <div class="ms_sidebar px-2 text-white d-flex flex-column justify-content-between">
+        <ul class="ms_sidebar-menu align-items-start p-4 list-unstyled position-relative">
+          <li><i class="fa-solid fa-house pb-4"></i><span class="d-none d-lg-inline ps-2">Home</span></li>
+          <li><i class="fa-solid fa-chart-simple pb-4"></i><span class="d-none d-lg-inline ps-2">Stats</span></li>
+          <li><i class="fa-solid fa-signal"></i><span class="d-none d-lg-inline ps-2">Signals</span></li>
+        </ul>
+        <ul class="ms_sidebar-menu-bottom list-unstyled p-4">
+          <li><i class="fa-solid fa-gear"></i><span class="d-none d-lg-inline ps-2">Admin</span></li>
+        </ul>
+      </div>
+       <!-- /sidebar -->
+      <div class="ms_content">
+        <div class="ms_inner-header"></div>
       </div>
     </div>
+    <!-- /main-content -->
     
   </div>
 </body>
