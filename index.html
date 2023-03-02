@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Dashboard</title>
 </head>
 <body>
@@ -14,30 +17,42 @@
   <div class="ms_wrapper">
 
     <!-- header -->
-      <div class="ms_header d-flex align-items-center justify-content-between">
-          <div class="ms_logo ms-2">
-            <img class="d-lg-none" src="img/mobile-logo.png" alt="">
-            <img class="d-none d-lg-block" src="img/logo.svg" alt="">
-          </div>
-          <div class="input-group px-4">
-            <div class="input-group-text">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-              </svg>
+    <header>
+      <div class="ms_header d-flex align-items-center">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-auto d-flex align-items-center">
+              <img class="mobile-logo d-lg-none" src="img/mobile-logo.png" alt="">
+              <img class="d-lg-block d-none" src="img/logo.svg" alt="">
             </div>
-            <input type="text" class="form-control" aria-label="Text input with radio button" placeholder="Prova a cercare: lezioni di Laravel">
+            <div class="col d-flex align-items-center">
+              <div class="input-group">
+                <div class="input-group-text bg-body-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </div>
+                <input type="text" class="form-control bg-body-secondary" aria-label="Text input with checkbox">
+              </div>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+              <div class="ms_notifications">
+                <i class="fa-solid fa-list-ul me-4 d-none d-lg-inline"></i>
+                <i class="fa-solid fa-circle-question d-none d-lg-inline"></i>
+                <i class="fa-solid fa-ellipsis-vertical mx-4 d-none d-lg-inline"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                </svg>
+              </div>
+            </div>
           </div>
-          <div class="ms_notifications pe-4 d-flex">
-            <i class="fa-solid fa-list-ul me-4 d-none d-lg-inline"></i>
-            <i class="fa-solid fa-circle-question d-none d-lg-inline"></i>
-            <i class="fa-solid fa-ellipsis-vertical mx-4 d-none d-lg-inline"></i>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
-            </svg>
-          </div>
+        </div>
       </div>
     </header>
     <!-- /header -->
+
+    
+
 
     <!-- main-content -->
     <div class="ms_main-content d-flex">
@@ -55,27 +70,240 @@
       </div>
        <!-- /sidebar -->
 
-      <div class="ms_content">
-        <div class="ms_inner-header text-white">
+      <div class="ms_content overflow-auto">
+
+        <!-- inner header -->
+        <div class="ms_inner-header text-white bg-primary py-2">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-12 col-md-4 g-3">
-                <p>Nuovo Studente</p>
-                <button type="button" class="ms_btn-white btn btn-outline-primary">+</button>
+              <div class="col-12 col-md-4 g-3 col-lg-2 order-sm-0 order-md-3">
+                <p>Nuovo Studente
+                <button type="button" class="ms_btn-white btn btn-outline-primary mx-2">+</button></p>
               </div>
-              <div class="col-12 col-md-4 g-3">
+              <div class="col-12 col-md-4 col-lg-6 g-3 order-sm-1">
+                <div class="top">
                   <h2 class="d-inline-block">Boolean</h2>
-                  <span class="badge rounded-pill text-bg-primary text-center">Piano Blaze</span> <br>
-                  <span class="badge rounded-pill text-bg-primary">3 app</span><i class="fa-solid fa-angles-right"></i>
-                  <span class="badge rounded-pill text-bg-primary">+</span>
+                  <span class="badge rounded-pill text-center text-white ms_bg-color">Piano Blaze</span>
+                </div>
+                <div class="bottom">
+                  <span class="badge rounded-pill  align-middle text-white ms_bg-color">3 app</span>
+                  <i class="fa-solid fa-angles-right"></i>
+                  <span class="badge rounded-pill align-middle d-lg-none">+</span>
+                  <span class="badge rounded-pill align-middle d-none d-lg-inline ms_bg-color">Boolean mobile app</span>
+                  <span class="badge rounded-pill align-middle d-none d-lg-inline ms_bg-color">Boolean web app</span>
+                  <span class="badge rounded-pill align-middle d-none d-lg-inline ms_bg-color">Boolean blog app</span>
+                </div>
               </div>
-              <div class="col-12 col-md-4 g-3">
+              <div class="col-12 col-md-4 col-lg-4 g-3 order-sm-2">
                 <p class="m-0 p-0">Studenti online negli ultimi 30 minuti</p>
                 <p class="fs-3">125</p>
               </div>
             </div>
           </div>
         </div>
+        <!-- /inner header -->
+
+        <!-- main -->
+          <div class="container-fluid py-4">
+            <div class="row g-4">
+              <div class="col-12 col-lg-8">
+                <!-- tabella -->
+                <div class="card mb-4">
+                  <div class="card-header">
+                  <h4>Prossime classi</h4>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nome</th>
+                          <th class="d-none d-md-table-cell" scope="col">Data Inizio</th>
+                          <th class="d-none d-md-table-cell" scope="col">ROI</th>
+                          <th scope="col">Stato</th>
+                          <th scope="col-lg-2">Azioni</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Classe 75</td>
+                          <td class="d-none d-md-table-cell">15 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 76</td>
+                          <td class="d-none d-md-table-cell">16 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 77</td>
+                          <td class="d-none d-md-table-cell">17 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-warning text-white">Process</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 78</td>
+                          <td class="d-none d-md-table-cell">18 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 79</td>
+                          <td class="d-none d-md-table-cell">19 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 80</td>
+                          <td class="d-none d-md-table-cell">20 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-warning text-white">Process</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 81</td>
+                          <td class="d-none d-md-table-cell">21 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Classe 82</td>
+                          <td class="d-none d-md-table-cell">22 Feb 2021</td>
+                          <td class="d-none d-md-table-cell">20%</td>
+                          <td><span class="badge text-bg-success">Done</span></td>
+                          <td>
+                            <i class="fa-solid fa-pencil me-3 icon"></i>
+                            <i class="fa-solid fa-trash icon"></i>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- faq -->
+                <div class="card">
+                  <div class="card-header">
+                    <h4>F.A.Q.</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="accordion" id="accordionExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Come aggiungere un nuovo studente?
+                          </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo nam repellat illum suscipit labore officia aperiam facere, accusamus maxime corporis non asperiores autem corrupti, fuga aliquid distinctio obcaecati. Dolorem, neque?
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Come posso accedere alle informazioni del mio account?
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati ullam ab maxime doloribus rerum quisquam, quae vitae ut sint. Nobis rem nemo maxime itaque esse hic facilis vel sit.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Posso usare questa dashboard da mobile?
+                          </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda laudantium fugit aliquid praesentium veritatis sint deleniti quis natus quas, quisquam ipsum? Dicta, consectetur accusamus fugit asperiores quisquam optio eius eos?
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <!-- todo -->
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h4>To do</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">Kick off nuove classi</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                        <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                      </li>
+                      <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- utenti attivi -->
+                <div class="card border p-2">
+                  <div class="card w-100" style="width: 18rem;">
+                    <img src="img/stats.jpeg" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Utenti attivi</h5>
+                      <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Gennaio: 1200</li>
+                      <li class="list-group-item">Febbraio: 800</li>
+                      <li class="list-group-item">Marzo: 1500</li>
+                    </ul>
+                    <div class="card-body">
+                      <a href="#" class="card-link">Visualizza report approfondito</a>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
     </div>
     <!-- /main-content -->

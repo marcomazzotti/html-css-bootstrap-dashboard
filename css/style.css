@@ -1,39 +1,36 @@
-.ms_main-content{
-  width: 100%;
-  height: calc(100% - 100px);
-  border: 1px solid black;
-}
-
-.ms_content{
-  width: calc(100%);
-  height: 100%;
-  background-color: blue;
-}
 
 /* common */
-:root{
-  --inner-header-color: #1B72E8;
-  --primary-color: white;
-}
-
-img{
-  width: 100%;
+body{
+  font-family: 'Roboto', sans-serif;
 }
 
 .ms_wrapper{
   width: 100%;
   height: 100vh;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+}
+
+.ms_main-content{
+  width: 100%;
+  height: calc(100% - 70px);
+  border: 1px solid black;
+}
+
+.ms_content{
+  width: 100%;
+  height: 100%;
+  /* background-color: blue; */
+  /* border: 5px solid green; */
 }
 
 /* header */
 .ms_header{
-  height: 100px;
+  min-height: 70px;
   width: 100%;
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 }
 
-.ms_logo, .ms_notificatons{
+.mobile-logo{
   width: 10%;
 }
 
@@ -57,20 +54,28 @@ img{
 /* inner-header */
 .ms_inner-header{
   width: 100%;
-  min-height: 70px;
-  background-color: red;
+  min-height: 100px;
 }
 
 .ms_btn-white{
-  background-color: none;
-  color: white;
-  border: 1px solid white;
+  color: white !important;
+  border: 1px solid white !important;
+  display: inline !important;
 }
 
-.ms_btn-white:hover{
-  background-color: none;
+.ms_bg-color{
+  background-color: #165bba;
 }
 
+.main{
+  /* border: 3px solid pink; */
+  height: calc(100% - 100px);
+  width: 100%;
+}
 
-
-
+.icon{
+  color:grey;
+  border: 1px solid grey;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
